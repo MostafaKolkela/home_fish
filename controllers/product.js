@@ -21,7 +21,7 @@ const  addProduct = async (req, res, next) => {
 const  getProducts = async(req, res, next)=>{
   try {
     const products = await Product.find();
-    res.send(products);
+    res.json(products);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
