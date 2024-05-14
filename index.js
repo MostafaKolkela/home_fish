@@ -8,6 +8,10 @@ const usersRouter = require('./router/userRouter');
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+   res.send('Hello, World!');
+ });
+
 app.use('/api/users', usersRouter) 
 
 app.use('/api/orders', orderRouter) 
